@@ -1,0 +1,257 @@
+:root {
+  --project-tile-phone-width: 300px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+  
+}
+.header-background {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  background-color: #243642;
+  z-index: -1;
+  opacity: 90%;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.7);
+  z-index: 10;
+  opacity: 100%;
+  
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none; 
+  margin-top: 0px;
+  font-size: 1.2rem;
+  align-items: center;
+  text-align: center;
+}
+.navlink {
+  transition: 0.3s linear 0ms;
+  height: 70px;
+  display: flex;
+}
+.navlink:hover {
+  color: #EB8317;
+  background-color: #E2F1E7;
+  
+}
+li {
+  line-height: 60px;
+  padding: 0 20px;
+  border-right: white solid 1px;
+  margin: 0 auto;
+}
+
+ul::before{
+  content:"";
+  width: 40%;
+  
+}
+main {
+  margin-top: 70px;
+
+}
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    #387478,
+    #E2F1E7
+  );
+  display: flex;
+}
+.introduction {
+  width: 80%;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+.title {
+  font-size: 5rem;
+}
+.webdevtext {
+  color: #FF6500;
+  text-shadow: 2px 2px 2px black;
+  font-size: 1.5rem;
+}
+
+
+#projects {
+  width: 100%;
+  background-color: #1E3E62;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-link {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  margin: 30px 30px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  padding: 0;
+  overflow: hidden;
+  min-width: 300px;
+}
+.section_title {
+  text-align: center;
+  font-size: 3rem;
+  color: #387478;
+  
+}
+hr {
+  height: 3px;
+  background-color: #387478;
+}
+
+
+.before-project-title-coming-soon::after {
+  content: "<coming soon/>";
+  position: relative;
+  top: 20px;
+  left: 70px;
+  font-size: 2rem;
+}
+.before-project-title-coming-soon {
+  margin: 0;
+}
+
+.project-tile.coming-soon {
+  width: 300;
+  min-width: 400px;
+  height: 500px;
+  background-color: gray;
+}
+.project-popup {
+  width: 400px;
+  height: 100px;
+  background-color: #16423C;
+  top: 300px;
+
+}
+
+.project-popup:hover {
+  top: 400px;
+}
+
+.project-tile.first {
+  width: 400px;
+  height: 500px;
+  background-color: #C4DAD2;
+  transition: 0.5s ease-out 0ms;
+}
+
+.project-tile.first:hover {
+  width: 400px;
+  height: 430px;
+}
+.popup-text {
+  margin: 0;
+  top: 20px;
+  text-align: center;
+  position: relative;
+
+}
+.not-ready:hover {
+  cursor: not-allowed;
+}
+.project-title {
+  margin: 0;
+  padding: 30px 30px;
+  text-align: center;
+  color: #387478;
+  
+}
+.project-description {
+  text-align: center;
+  color: #243642;
+  padding: 0 20px;
+  font-size: 1.3rem;
+
+}
+.contacts {
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: #243642;
+  margin: 0;
+}
+.contacts-preview {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+#profile-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  ul::before{
+  content:"";
+  width: 0%;
+  
+  }
+  .title {
+    font-size: 4.5rem;
+  }
+  .project-tile.first {
+  width: 400px;
+  height: 430px;
+  }
+  #welcome-section {
+    height: 700px;
+  }
+  
+
+}
+@media (max-width: 500px) {
+  .project-link {
+    max-width: var(--project-tile-phone-width);
+  }
+  .project-tile.first {
+    max-width: var(--project-tile-phone-width);
+  }
+  .coming-soon {
+    max-width: var(--project-tile-phone-width);
+  }
+  .project-popup {
+    max-width: var(--project-tile-phone-width);
+  }
+  li {
+    padding: 0 10px;
+  }
+  .before-project-title-coming-soon::after {
+  content: "<coming soon/>";
+  position: relative;
+  top: 20px;
+  left: 55px;
+  font-size: 1.5rem;
+}
+}
